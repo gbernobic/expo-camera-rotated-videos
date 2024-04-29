@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Dimensions,
   Pressable,
+  Alert,
 } from "react-native";
 import { CameraView, useCameraPermissions } from "expo-camera/next";
 import { Video } from "expo-av";
@@ -118,6 +119,8 @@ export default CameraScreen = () => {
             onMountError={(error) => {
               console.log("camera error", error);
             }}
+            responsiveOrientationWhenOrientationLocked={true}
+            onResponsiveOrientationChanged={Alert.alert("Orientation changed")}
           >
             {!videoSource && (
               <View style={styles.buttonContainer}>
