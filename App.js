@@ -111,7 +111,6 @@ export default CameraScreen = () => {
           <CameraView
             style={styles.camera}
             facing={facing}
-            type={"back"}
             ref={cameraRef}
             onCameraReady={onCameraReady}
             mute={true}
